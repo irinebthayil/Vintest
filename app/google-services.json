@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "443868989834",
+    "firebase_url": "https://vintest-756dd.firebaseio.com",
+    "project_id": "vintest-756dd",
+    "storage_bucket": "vintest-756dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443868989834:android:240eda89f26302bf592073",
+        "android_client_info": {
+          "package_name": "com.example.vintest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443868989834-jbvoh6i4ugvnglm19b9me9h2lu6rc4bn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfHCTIrcq6_crDOUnP3_cv1xlNEMtu4nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443868989834-jbvoh6i4ugvnglm19b9me9h2lu6rc4bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

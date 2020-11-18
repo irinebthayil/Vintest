@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/c"
+    android:layout_height="match_parent"
+    tools:context=".Quiz">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:id="@+id/question1"
+        android:text="Question 1"
+        android:layout_marginTop="30dp"/>
+
+    <RadioGroup
+        android:id="@+id/q1rg"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question1">
+
+        <RadioButton
+            android:id="@+id/q1r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opt 1"/>
+
+        <RadioButton
+            android:id="@+id/q1r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opt 2"/>
+
+        <RadioButton
+            android:id="@+id/q1r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opt 3"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:id="@+id/question2"
+        android:text="Question 2"
+        android:layout_below="@+id/q1rg"
+        android:layout_marginTop="30dp"/>
+
+    <RadioGroup
+        android:id="@+id/q2rg"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question2">
+
+        <RadioButton
+            android:id="@+id/q2r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opt 1"/>
+
+        <RadioButton
+            android:id="@+id/q2r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opt 2"/>
+
+        <RadioButton
+            android:id="@+id/q2r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opt 3"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:id="@+id/question3"
+        android:text="Question 3"
+        android:layout_below="@+id/q2rg"
+        android:layout_marginTop="30dp"/>
+
+    <RadioGroup
+        android:id="@+id/q3rg"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question3">
+
+        <RadioButton
+            android:id="@+id/q3r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opt 1"/>
+
+        <RadioButton
+            android:id="@+id/q3r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opt 2"/>
+
+        <RadioButton
+            android:id="@+id/q3r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opt 3"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q3rg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Submit"/>
+    </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
