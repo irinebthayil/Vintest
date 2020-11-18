@@ -42,7 +42,7 @@ public class score extends Fragment {
         View v = inflater.inflate(R.layout.fragment_score, container, false);
         uscore = v.findViewById(R.id.userscore);
 
-        firebaseFirestore.collection("scores").document(mAuth.getCurrentUser().getUid()).collection(sub).document("s").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+        firebaseFirestore.collection("scores").document(mAuth.getCurrentUser().getUid()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful())
@@ -50,7 +50,7 @@ public class score extends Fragment {
                     DocumentSnapshot documentSnapshot = task.getResult();
                     if (documentSnapshot!=null)
                     {
-                        uscore.setText(documentSnapshot.getString("score"));
+                        uscore.setText(documentSnapshot.getString(sub));
                     }
                 }
             }

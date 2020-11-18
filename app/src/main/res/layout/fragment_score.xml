@@ -22,7 +22,7 @@
             android:id="@+id/userscore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3/3"
+            android:text=""
             android:textSize="100sp"
             android:layout_centerInParent="true"
             android:layout_marginTop="50dp"

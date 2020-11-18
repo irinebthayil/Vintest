@@ -79,6 +79,7 @@ public class Quiz extends AppCompatActivity {
     }
 
     private void checkanswer() {
+        score =0;
 
         int selectedId = rg1.getCheckedRadioButtonId();
         RadioButton radioButton = (RadioButton) findViewById(selectedId);
@@ -107,6 +108,18 @@ public class Quiz extends AppCompatActivity {
                             score++;
                         if (ans3.equals(documentSnapshots.get(2).getString("ans")))
                             score++;
+
+                        Map<String, Object> s2 = new HashMap<>();
+                        s2.put(sub, score+"/3");
+
+                        firebaseFirestore.collection("scores").document(mAuth.getCurrentUser().getUid()).set(s2);
+                        //firebaseFirestore.collection("scores").document(mAuth.getCurrentUser().getUid()).collection(sub).document("s").set(s);
+
+                        score f = new score();
+                        Bundle b = new Bundle();
+                        b.putString("sub", sub);
+                        f.setArguments(b);
+                        getSupportFragmentManager().beginTransaction().add(R.id.c, f).addToBackStack(null).commit();
                     }
 
                 }
@@ -114,16 +127,7 @@ public class Quiz extends AppCompatActivity {
         });
 
 
-        Map<String, Object> s = new HashMap<>();
-        s.put("score", String.valueOf(score));
 
-        firebaseFirestore.collection("scores").document(mAuth.getCurrentUser().getUid()).collection(sub).document("s").set(s);
-
-        score f = new score();
-        Bundle b = new Bundle();
-        b.putString("sub", sub);
-        f.setArguments(b);
-        getSupportFragmentManager().beginTransaction().add(R.id.c, f).addToBackStack(null).commit();
     }
 
     private void setquestions() {
